@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react";
 import Head from "next/head";
 import { Navbar } from "../ui";
 
-const origin = typeof window === undefined ? "" : window.location.origin;
+const origin = (typeof window === 'undefined') ? "" : window.location.origin;
 interface Props {
   children: ReactNode;
   title?: string;
