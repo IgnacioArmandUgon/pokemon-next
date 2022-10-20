@@ -28,9 +28,9 @@ const PokemonByName: NextPage<Props> = ({ id, name, img, sprites }) => {
     if (!isInFavorites) {
       confetti({
         zIndex: 1,
-        particleCount: 10000,
+        particleCount: 120,
         spread: 250,
-        angle: -100,
+        angle: -150,
         origin: {
           x: 1,
           y: 0,
