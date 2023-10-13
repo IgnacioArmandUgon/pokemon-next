@@ -1,7 +1,4 @@
 import { Container, Text, Image } from "@nextui-org/react";
-
-import { Layout } from "../../components/layouts";
-
 export const NoFavorites = () => {
   return (
     <Container
@@ -21,11 +18,11 @@ export const NoFavorites = () => {
         }
         width={250}
         height={250}
-        alt={"asdasd"}
+        alt={"Default pokemon image"}
         css={{
-            opacity:'0.1'
+          opacity: '0.1'
         }}
-      ></Image>
+      />
     </Container>
   );
 };

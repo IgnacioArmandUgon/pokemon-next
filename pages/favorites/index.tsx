@@ -1,4 +1,3 @@
-import { Container, Text, Image, Grid, Card } from "@nextui-org/react";
 import React, { useState, useEffect } from "react";
 import { Layout } from "../../components/layouts";
 import { FavoritePokemons, NoFavorites } from "../../components/ui";

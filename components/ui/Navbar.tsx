@@ -18,10 +18,6 @@ export const Navbar = () => {
         backgroundColor: theme?.colors.gray100.value,
       }}
     >
-
-
-
-      
       <NextLink href="/" passHref>
         <Link>
           <Image

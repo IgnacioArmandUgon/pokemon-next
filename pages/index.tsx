@@ -28,14 +28,13 @@ const Home: NextPage<Props> = ({ pokemons }) => {
 
 // Función que se llama solo en el build time
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   const { data } = await pokeApi.get<PokemonListResponse>("/pokemon?limit=151");
   const pokemons: SmallPokemon[] = data.results.map((pokemon, index) => ({
     ...pokemon,
     id: index + 1,
-    img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${
-      index + 1
-    }.svg`,
+    img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index + 1
+      }.svg`,
   }));
   return {
     props: { pokemons },

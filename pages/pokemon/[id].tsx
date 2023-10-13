@@ -7,20 +7,20 @@ import { Pokemon } from "../../interfaces";
 import { getInfo, isPokemonInFavorites, toggleFavorite } from "../../utils";
 import confetti from "canvas-confetti";
 interface Props {
-    name: string;
-    img: string;
-    id: number;
-    sprites: {
-      front_default: string;
-      back_default: string;
-      front_shiny: string;
-      back_shiny: string;
-    };
-  
+  name: string;
+  img: string;
+  id: number;
+  sprites: {
+    front_default: string;
+    back_default: string;
+    front_shiny: string;
+    back_shiny: string;
+  };
+
 }
 
 const PokemonPage: NextPage<Props> = ({ id, name, img, sprites }) => {
-  
+
   const [isInFavorites, setIsInFavorites] = useState(isPokemonInFavorites(id));
 
   const onToggleFavorite = () => {
@@ -42,9 +42,9 @@ const PokemonPage: NextPage<Props> = ({ id, name, img, sprites }) => {
   };
   return (
     <Layout title={name}>
-      <Grid.Container css={{ marginTop: "15px" }}>
+      <Grid.Container css={{ mt: "15px" }}>
         <Grid xs={12} sm={4}>
-          <Card isHoverable={true} css={{ margin: "10px" }}>
+          <Card isHoverable={true} css={{ m: "10px" }}>
             <Card.Body>
               <Card.Image
                 src={img || "/no-image.png"}
@@ -59,7 +59,7 @@ const PokemonPage: NextPage<Props> = ({ id, name, img, sprites }) => {
         <Grid xs={12} sm={8}>
           <Card css={{ margin: "10px" }}>
             <Card.Header
-              css={{ display: "flex", justifyContent: "space-between", flexDirection: 'column', '@sm': {flexDirection: 'row'}}}
+              css={{ display: "flex", justifyContent: "space-between", flexDirection: 'column', '@sm': { flexDirection: 'row' } }}
             >
               <Text h1 transform="capitalize">
                 {name}
@@ -123,7 +123,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { id } = params as { id: string };
 
   return {
-    props: await getInfo(id) 
+    props: await getInfo(id)
   };
 };
 

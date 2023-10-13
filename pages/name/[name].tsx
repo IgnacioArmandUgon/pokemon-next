@@ -40,9 +40,9 @@ const PokemonByName: NextPage<Props> = ({ id, name, img, sprites }) => {
   };
   return (
     <Layout title={name}>
-      <Grid.Container css={{ marginTop: "15px" }}>
+      <Grid.Container css={{ mt: "15px" }}>
         <Grid xs={12} sm={4}>
-          <Card isHoverable={true} css={{ margin: "10px" }}>
+          <Card isHoverable={true} css={{ m: "10px" }}>
             <Card.Body>
               <Card.Image
                 src={img || "/no-image.png"}
@@ -55,9 +55,9 @@ const PokemonByName: NextPage<Props> = ({ id, name, img, sprites }) => {
         </Grid>
 
         <Grid xs={12} sm={8}>
-          <Card css={{ margin: "10px" }}>
+          <Card css={{ m: "10px" }}>
             <Card.Header
-              css={{ display: "flex", justifyContent: "space-between", flexDirection: 'column', '@sm': {flexDirection: 'row'}}}
+              css={{ display: "flex", justifyContent: "space-between", flexDirection: 'column', '@sm': { flexDirection: 'row' } }}
             >
               <Text h1 transform="capitalize">
                 {name}
